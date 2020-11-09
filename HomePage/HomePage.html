@@ -1,16 +1,162 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Musica</title>
         <link rel="stylesheet" type="text/css" href="HomePageStyle.css">
+        <!-- libreria per le icone -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     
     <body>
+        <!--Immagine e header-->
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1>Progetto Tps Info</h1>
+              <p>Locatelli, Colombo, Fumagalli, Sormani, Anghileri</p>
+            </div>
+        </div>
+
         <!--navigazione-->
-        <a href="../HomePage/HomePage.html">Home</a>
-        <a href="../Chitarra/Chitarra.html">Chitarra</a>
-        <a href="../Pianoforte/Pianoforte.html">Pianoforte</a>
-        <a href="../Batteria/Batteria.html">Batteria</a>
-        <a href="../Violino/Violino.html">Violino</a>
+        <div class="navbar">
+            <a class="tab-attivo" href="../HomePage/HomePage.html">Home</a>
+            <a href="../Chitarra/Chitarra.html">Chitarra</a>
+            <a href="../Pianoforte/Pianoforte.html">Pianoforte</a>
+            <a href="../Batteria/Batteria.html">Batteria</a>
+            <a href="../Violino/Violino.html">Violino</a>
+        </div>
+
+        <!--tabella corsi e navigazione laterale-->
+        <div class="clearfix">
+
+            <!--corsi-->
+            <div class="box-corsi">
+                <div class="card">
+                    <img class="card-img" src="img_home/chitarra.jpg" alt="Chitarra">
+                    <div class="card-content">
+                      <h4><b>Chitarra</b></h4>
+                      <p>Corso di chitarra elettrica e acustica</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="img_home/batteria.jpg" alt="Batteria">
+                    <div class="card-content">
+                      <h4><b>Batteria</b></h4>
+                      <p>Corso per principianti e intermedi di batteria</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="img_home/violino.jpg" alt="Violino">
+                    <div class="card-content">
+                      <h4><b>Violino</b></h4>
+                      <p>Corso di violino per tutti i livelli di difficoltà</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="img_home/piano.jpg" alt="Pianoforte">
+                    <div class="card-content">
+                      <h4><b>Pianoforte</b></h4>
+                      <p>Corso di pianoforte intermedio e avanzato</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--navigazione laterale-->
+            <div class="sidenav">
+                <ol class="sidenav-list">
+                    <li><a class="tab-attivo" href="../HomePage/HomePage.html">Home</a></li>
+                    <li><a href="../Chitarra/Chitarra.html">Chitarra</a></li>
+                    <li><a href="../Pianoforte/Pianoforte.html">Pianoforte</a></li>
+                    <li><a href="../Batteria/Batteria.html">Batteria</a></li>
+                    <li><a href="../Violino/Violino.html">Violino</a></li>
+                </ol>
+                
+            </div>
+        </div>
+
+
+        <!--presentazione della scuola di musica-->
+        <div class="presentazione-scuola">
+            <div class="presentazione-scuola-title">
+                <h1>LA NOSTRA SCUOLA</h1>
+            </div>
+            <div class="presentazione-scuola-description">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Aenean fringilla dolor fermentum mollis auctor. 
+                    Nullam lacinia mi ornare, rutrum enim ac, egestas orci. 
+                    Etiam gravida purus et turpis convallis rhoncus. 
+                    Pellentesque dapibus orci quis massa ultrices faucibus. 
+                </p>
+            </div>
+        </div>
+
+        <!--tabella ore-->
+        <div style="margin: 25px;">
+            <table id="tabella-ore">
+                <tbody>
+                    <tr>
+                        <th>Corso</th>
+                        <th>Numero ore</th>
+                    </tr>
+                    <tr>
+                        <td>Chitarra</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Batteria</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Violino</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Pianoforte</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <th>Totale</th>
+                        <td id="totale-ore"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <script>
+                var table = document.getElementById("tabella-ore");
+                var celle = table.getElementsByTagName('td');
+                var tot = 0;
+                
+                for(var i = 0; i < celle.length -1; i++)
+                {
+                    if(! isNaN(celle[i].textContent))
+                    {
+                        tot += parseInt(celle[i].textContent);
+                    }
+                }     
+
+                document.getElementById('totale-ore').textContent = tot;
+            </script>
+
+        </div>
+
+        <div class="footer">
+            <b>Contattaci</b>
+            <div class="footer-socials">
+                <a href="https://twitter.com/"><i class="fa fa-twitter"> Twitter</i></a>
+                <a href="https://it-it.facebook.com/"><i class="fa fa-facebook"> Facebook</i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"> Instagram</i></a>
+                <a href="https://it.linkedin.com/"><i class="fa fa-linkedin"> Linkedin</i></a>
+            </div>
+            
+            <p>Posta elettronica: scuolamusica@gmail.com</p>
+
+            <p><i style="color: rgba(255, 255, 255, 0.3)" class="fa fa-copyright">ScuolaMusica2020</i></p>
+
+        </div>
+
     </body>
 </html>
