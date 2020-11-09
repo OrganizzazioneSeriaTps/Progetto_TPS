@@ -50,5 +50,78 @@
                 </td></tr>
             </tbody>
         </table>
+        <!-- Tabella contenente la tabella delle lezioni e La barra di navigazione laterale (Verticale) -->
+        <table border="0" width="100%" alingn="center"><tr>
+            <!-- Tabella lezioni -->
+            <td><table class="Tabella" id="TabellaLezioni" border="1" align="left">
+                <tbody>
+                    <tr><th bgcolor="lightgreen">Prima Lezione: Accordi</th><th bgcolor="lightgreen">Seconda Lezione: Accordi avanzati</th></tr>
+                    <tr>
+                        <td bgcolor="white">
+                            In questa semplice lezione il maestro ti spiegherà come fare gli accordi piu semplici.
+                            La lezione inizia con un'introduzione generale e teorica per quanto riguarda gli accordi di base.
+                            Dopo questa fase della lezione (Della durata di circa un'ora) passerai alla pratica.
+                            Entro la fine della lezione anche tu saprai suonare gli accordi basilari!
+                        </td>
+                        <td bgcolor="white">
+                            In questa lezione il maestro ti spiegherà come fare gli accordi avanzati.
+                            La lezione inizia con un'introduzione generale e teorica per quanto riguarda gli accordi avanzati.
+                            Dopo questa fase della lezione (Della durata di circa un'ora) passerai alla pratica.
+                            Entro la fine della lezione anche tu saprai suonare gli accordi complessi!
+                        </td>
+                    </tr>
+                    <tr><th bgcolor="lightgreen">Terza Lezione: Prime canzoni</th><th bgcolor="lightgreen">Quarta Lezione: Preparazione saggio</th></tr>
+                    <tr>
+                        <td bgcolor="white">
+                            In questa lezione proverai a suonare le tue prime canzoni.
+                            Le prime canzoni del nostro repertorio sono canzoni appartenenti alla tradizione classica.
+                            Dopo questa lezione avrai imparato a suonare una sinfonia di Mozart e una di Bach.
+                            Impara anche tu a suonare queste sinfonie! (Durata: due ore circa)
+                        </td>
+                        <td bgcolor="white">
+                            In questa lezione ti preparerai al saggio che stiamo preparando.
+                            In questo saggio sono presenti varie canzoni più contemporanee e amate dagli ascoltatori.
+                            Per questo saggio sarà necessario imparare le canzoni previste da noi.
+                            Dovrai inoltre imparare di tuo una canzone che ti piace e suonarla!
+                        </td>
+                    </tr>
+                </tbody>
+            </table></td>
+        
+            <!-- Barra di navigazione da mettere in verticale-->       
+             <td align="right"><table id="Barra_Nav" border="0" align="right">
+               <tr><td><ul id="Navigazione_Verticale_Ul">
+                <li><a class="Navigazione_Verticale_Li" href="HomePage.html">HomePage</a></li>
+                <li><a class="Navigazione_Verticale_Li" href="Batteria.html">Batteria</a></li>
+                <li><a class="Navigazione_Verticale_Li" href="Chitarra.html">Chitarra</a></li>
+                <li><a class="Navigazione_Verticale_Li2" href="Violino.html">Violino</a></li>
+               </ul>
+             </td></tr></table></td>  
+    </tr></table>
+            <!-- Tabella riassuntiva -->
+            <table id="Table" border = 1 align="center" class="Tabella">
+                <tr><th bgcolor="lightgreen">Lezione</th><th bgcolor="lightgreen">Ore</th></tr>
+                <tr><td bgcolor="white">Prima</td><td bgcolor="white">2</td></tr>
+                <tr><td bgcolor="white">Seconda</td><td bgcolor="white">3</td></tr>
+                <tr><td bgcolor="white">Terza</td><td bgcolor="white">1</td ></tr>
+                <tr><td bgcolor="white">Quarta</td><td bgcolor="white">2</td></tr>
+                <tr><th bgcolor="lightgreen">Totale</th><td bgcolor="white" id="totale"></td></tr> 
+                <!-- Metodo per calcolare il totale delle ore -->
+                <script>    
+                    var table = document.getElementById("Table");
+                    var cells = table.getElementsByTagName("td");
+                    var tot = 0;
+                    for (var i = 0; i < (cells.length -1); i++) 
+                    {
+                        var v = cells[i].textContent;
+                        if (! isNaN(v))  // isNaN valuta se può essere convertito in numero ma non lo converte
+                        {
+                            v = parseInt(v); // parseInt converte in numeri ma non ritorno un valore booleano testabile nel IF
+                            tot = tot + v;
+                        }
+                    }
+                    document.getElementById("totale").textContent = tot;
+                </script>
+            </table>
     </body>
 </html>
