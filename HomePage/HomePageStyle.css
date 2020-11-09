@@ -1,0 +1,149 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e2e2e2;
+}
+
+/********************************************************************
+INTESTAZIONE CON IMMAGINE E TITOLO
+*********************************************************************/
+
+.hero-image {
+    /*Imposta un effetto sfumato nero con valore alfa di opacità 0.5 sull'immagine 
+    in modo da rendere testo più visibile*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img_home/background.jpg");
+  
+    /* quanta altezza rispetto il totale della pagina deve occupare */
+    height: 40%;
+  
+    /* Centra l'immagine in modo che scali cambiando la dimensione della pagina */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
+/* Formattazione del testo al centro dell'immagine */
+.hero-text {
+  text-align: center; /*centra il testo nel div */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+}
+
+
+/*****************************************************************
+BARRA DI NAVIGAZIONE
+*******************************************************************/
+.navbar{
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto; /*specifica cosa dovrebbe fare quando il div si sovrappone ad un altro elemento*/
+}
+
+.navbar a{
+    float: left; /*allinea tutti i tab verso sinistra*/
+    color: lightgray;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none; /*toglie la sottolineatura ai link*/
+    font-size: 18px;
+    transition: 0.4s; /*animazione dell'hover*/
+}
+
+/* Cambia il colore del link sul quale si trova il cursore */
+.navbar a:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+/* Colore specifico per il tab attivo di entrambe le navigazioni*/
+.navbar a.tab-attivo {
+   background-color: #304057;
+   color: white;
+}
+
+
+
+/*********************************************************************
+NAVIGAZIONE LATERALE
+**********************************************************************/
+.sidenav{
+    background-color: rgba(0, 0, 0, 0.9);
+    float: left;
+    width: 160px;
+    padding: 20px 15px 20px 15px;
+    margin: 30px 25px 0px 0px;
+}
+
+.sidenav a{
+    color: gray;
+    text-align: center;
+    text-decoration: none; /*toglie la sottolineatura ai link*/
+    font-size: 18px;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+
+.sidenav a.tab-attivo{
+    color: white;
+}
+
+.sidenav-list{
+    list-style-type: none;
+}
+
+.sidenav-list li{
+    margin-bottom: 20px;
+}
+
+
+/**************************************************************
+CARDS DEI CORSI
+*************************************************************/
+.box-corsi{
+    width: 80%;
+    float: left;
+    margin: 15px;
+
+    /*permette di distrubuire equamente le cards sulla larghezza disponibile*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
+    transition: 0.3s; /*tempo di durata della transizione per l'aumento dell'ombra*/
+    margin: 15px;
+    background-color: #efefef;
+}
+
+.card-img{
+    width: 100%;
+}
+
+/* L'ombra applicata alla card diventa più scura quando si passa sopra il mouse */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+.card-content{
+    padding: 25px;
+    font-size: 18px;
+}
+
+/*permette al div esterno di contenere i div della sidebar e dei corsi*/
+.clearfix:after {
+	
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0; 
+}

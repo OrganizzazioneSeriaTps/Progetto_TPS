@@ -1,16 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Musica</title>
         <link rel="stylesheet" type="text/css" href="HomePageStyle.css">
     </head>
     
     <body>
+        <!--Immagine e header-->
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1>Progetto Tps Info</h1>
+              <p>Locatelli, Colombo, Fumagalli, Sormani, Anghileri</p>
+            </div>
+        </div>
+
         <!--navigazione-->
-        <a href="../HomePage/HomePage.html">Home</a>
-        <a href="../Chitarra/Chitarra.html">Chitarra</a>
-        <a href="../Pianoforte/Pianoforte.html">Pianoforte</a>
-        <a href="../Batteria/Batteria.html">Batteria</a>
-        <a href="../Violino/Violino.html">Violino</a>
+        <div class="navbar">
+            <a class="tab-attivo" href="../HomePage/HomePage.html">Home</a>
+            <a href="../Chitarra/Chitarra.html">Chitarra</a>
+            <a href="../Pianoforte/Pianoforte.html">Pianoforte</a>
+            <a href="../Batteria/Batteria.html">Batteria</a>
+            <a href="../Violino/Violino.html">Violino</a>
+        </div>
+
+        <!--tabella corsi e navigazione laterale-->
+        <div class="clearfix">
+
+            <!--corsi-->
+            <div class="box-corsi">
+                <div class="card">
+                    <img class="card-img" src="img_home/chitarra.jpg" alt="Chitarra">
+                    <div class="card-content">
+                      <h4><b>Chitarra</b></h4>
+                      <p>Corso di chitarra elettrica e acustica</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="img_home/batteria.jpg" alt="Batteria">
+                    <div class="card-content">
+                      <h4><b>Batteria</b></h4>
+                      <p>Corso per principianti e intermedi di batteria</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="img_home/violino.jpg" alt="Violino">
+                    <div class="card-content">
+                      <h4><b>Violino</b></h4>
+                      <p>Corso di violino per tutti i livelli di difficoltà</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="img_home/piano.jpg" alt="Pianoforte">
+                    <div class="card-content">
+                      <h4><b>Pianoforte</b></h4>
+                      <p>Corso di pianoforte intermedio e avanzato</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--navigazione laterale-->
+            <div class="sidenav">
+                <ol class="sidenav-list">
+                    <li><a class="tab-attivo" href="../HomePage/HomePage.html">Home</a></li>
+                    <li><a href="../Chitarra/Chitarra.html">Chitarra</a></li>
+                    <li><a href="../Pianoforte/Pianoforte.html">Pianoforte</a></li>
+                    <li><a href="../Batteria/Batteria.html">Batteria</a></li>
+                    <li><a href="../Violino/Violino.html">Violino</a></li>
+                </ol>
+                
+            </div>
+        </div>
     </body>
 </html>
