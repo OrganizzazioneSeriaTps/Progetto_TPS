@@ -1,0 +1,113 @@
+@media screen and (max-width:1600px){
+  body{
+    background-color:gainsboro;
+  }
+  img{
+    background: white url(batteriaBIG.jpg);
+    height: 435;
+    width: 1507;
+  }
+  h1{
+    font: bold 55px/100% cursive;
+    text-shadow: 2px 2px #333;
+    color: orange;
+    text-align: center;
+  }
+  p{
+    font: oblique 35px/100% fantasy;
+    color: darkorange;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li {
+    display: inline;
+  }
+  li {
+    float: left;
+  }
+  
+  a {
+    display: block;
+  color:orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: medium;
+  font-family: cursive;
+  }
+  th{
+    color:darkorange;
+    font-size: xx-large;
+    text-shadow: 1px 1px #333;
+    font-family: fantasy;
+  }
+  td{
+    font-size: medium;
+    text-align: center;
+    font-family: cursive;
+    
+  }
+}
+@media screen and (max-width:950px){
+  body{
+    background-color:gainsboro;
+  }
+  img{
+    background: white url(batteriaMEDIA.jpg);
+    height: 345;
+    width: 897;
+  }
+  h1{
+    font: bold 45px/100% cursive;
+    text-shadow: 2px 2px #333;
+    color: orange;
+    text-align: center;
+  }
+  p{
+    font: oblique 30px/100% fantasy;
+    color: darkorange;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li {
+    display: inline;
+  }
+  li {
+    float: left;
+  }
+  
+  a {
+    display: block;
+  color:orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: medium;
+  font-family: cursive;
+  }
+  th{
+    color:darkorange;
+    font-size: x-large;
+    text-shadow: 1px 1px #333;
+    font-family: fantasy;
+  }
+  td{
+    font-size: small;
+    text-align: center;
+    font-family: cursive;
+    
+  }
+}
+
