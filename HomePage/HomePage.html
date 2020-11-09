@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>Musica</title>
         <link rel="stylesheet" type="text/css" href="HomePageStyle.css">
+        <!-- libreria per le icone -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     
     <body>
@@ -74,5 +76,87 @@
                 
             </div>
         </div>
+
+
+        <!--presentazione della scuola di musica-->
+        <div class="presentazione-scuola">
+            <div class="presentazione-scuola-title">
+                <h1>LA NOSTRA SCUOLA</h1>
+            </div>
+            <div class="presentazione-scuola-description">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Aenean fringilla dolor fermentum mollis auctor. 
+                    Nullam lacinia mi ornare, rutrum enim ac, egestas orci. 
+                    Etiam gravida purus et turpis convallis rhoncus. 
+                    Pellentesque dapibus orci quis massa ultrices faucibus. 
+                </p>
+            </div>
+        </div>
+
+        <!--tabella ore-->
+        <div style="margin: 25px;">
+            <table id="tabella-ore">
+                <tbody>
+                    <tr>
+                        <th>Corso</th>
+                        <th>Numero ore</th>
+                    </tr>
+                    <tr>
+                        <td>Chitarra</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Batteria</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Violino</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Pianoforte</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <th>Totale</th>
+                        <td id="totale-ore"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <script>
+                var table = document.getElementById("tabella-ore");
+                var celle = table.getElementsByTagName('td');
+                var tot = 0;
+                
+                for(var i = 0; i < celle.length -1; i++)
+                {
+                    if(! isNaN(celle[i].textContent))
+                    {
+                        tot += parseInt(celle[i].textContent);
+                    }
+                }     
+
+                document.getElementById('totale-ore').textContent = tot;
+            </script>
+
+        </div>
+
+        <div class="footer">
+            <b>Contattaci</b>
+            <div class="footer-socials">
+                <a href="https://twitter.com/"><i class="fa fa-twitter"> Twitter</i></a>
+                <a href="https://it-it.facebook.com/"><i class="fa fa-facebook"> Facebook</i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"> Instagram</i></a>
+                <a href="https://it.linkedin.com/"><i class="fa fa-linkedin"> Linkedin</i></a>
+            </div>
+            
+            <p>Posta elettronica: scuolamusica@gmail.com</p>
+
+            <p><i style="color: rgba(255, 255, 255, 0.3)" class="fa fa-copyright">ScuolaMusica2020</i></p>
+
+        </div>
+
     </body>
 </html>

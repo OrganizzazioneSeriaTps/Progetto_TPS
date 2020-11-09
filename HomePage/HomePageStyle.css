@@ -147,3 +147,152 @@ CARDS DEI CORSI
 	clear: both;
 	height: 0; 
 }
+
+/**********************************
+PRESENTAZIONE SCUOLA
+***********************************/
+
+.presentazione-scuola {
+    /*Imposta un effetto sfumato nero con valore alfa di opacità 0.5 sull'immagine 
+    in modo da rendere testo più visibile*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img_home/studio.jpg");
+  
+    /* quanta altezza rispetto il totale della pagina deve occupare */
+    height: 40%;
+    margin: 25px;
+  
+    /* Centra l'immagine in modo che scali cambiando la dimensione della pagina */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*necessario per il posizionamento degli elementi child*/
+    position: relative;
+
+}
+
+.presentazione-scuola-title{
+    opacity: 1;
+
+    /*posizionamento*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /*centra il testo nel div */
+    
+
+    /* formattazione testo */
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    padding: 0px 15px 0px 15px;
+    transition: 0.3s ease;
+    mix-blend-mode: screen;
+}
+
+.presentazione-scuola-description{
+    opacity: 0;
+
+    /*posizione*/
+    text-align: center; /*centra il testo nel div */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*formattazione testo*/
+    color: white;
+    font-size: 20px;
+    padding: 5px 15px 5px 15px;
+    transition: 0.5s ease;
+}
+
+
+/* quando si va col mouse sopra l'immagine, scopare il titolo e appare la descrizione*/
+.presentazione-scuola:hover .presentazione-scuola-title{
+    opacity: 0; 
+}
+.presentazione-scuola:hover .presentazione-scuola-description{
+    opacity: 1;
+}
+
+
+/*************************************************************************
+TABELLA DELLE ORE
+**************************************************************************/
+#tabella-ore{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+}
+#tabella-ore th, td{
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/*funzione che permette di agire su righe pari (even) o dispari (odd)*/
+#tabella-ore tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+
+/**************************************************************
+FOOTER COI CONTATTI
+***************************************************************/
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.footer-socials{
+    margin: 20px 10px 20px 10px;
+}
+
+.footer-socials a{
+    color: #f2f2f2;
+    margin: 20px;
+    text-align: center;
+}
+
+
+/****************************************************
+RESPOSIVE
+******************************************************/
+@media screen and (max-width: 800px) {
+
+    .hero-text{
+        font-size: 15px;
+    }
+    .presentazione-scuola-title{
+        font-size: 14px;
+    }
+    .presentazione-scuola-description{
+        font-size: 16px;
+    }    
+
+    .card {
+        width: 44%;
+        float: left;
+    }
+
+    .box-corsi{
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 1280px) {
+    .box-corsi{
+        width: 97%;
+    }
+
+    .sidenav{
+        display: none;
+    }
+}
+
