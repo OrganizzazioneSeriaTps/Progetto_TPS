@@ -1,0 +1,54 @@
+/* Id per lo stile del titolo */
+#Titolo
+{
+    text-align: center;
+}
+/* Id per lo stile del sottotitolo */
+#Sottotitolo
+{
+    text-align: center;
+    font-style: italic;
+}
+.TabellaImmagini
+{
+    background-color: lightgrey;
+}
+/* Id per navigazione orizzontale Ul */
+#Navigazione_Orizzontale_Ul
+{   
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+}
+/* Class per navigazione orizzontale Li */
+.Navigazione_Orizzontale_Li
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+/* Class per navigazione orizzontale A */
+.Navigazione_Orizzontale_A
+{    
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #000;   
+}
+/* Class per lo stile delle tabelle */
+.Tabella
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    margin-left: auto;
+    margin-right: auto;
+   
+    border-collapse: collapse;
+}
