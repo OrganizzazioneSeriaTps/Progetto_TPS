@@ -3,9 +3,8 @@
     background-color:gainsboro;
   }
   img{
-    background: white url(batteriaBIG.jpg);
-    height: 435;
-    width: 1507;
+    height: 435px;
+    width: 1507px;
   }
   h1{
     font: bold 55px/100% cursive;
@@ -59,9 +58,8 @@
     background-color:gainsboro;
   }
   img{
-    background: white url(batteriaMEDIA.jpg);
-    height: 345;
-    width: 897;
+    height: 245px;
+    width: 897px;
   }
   h1{
     font: bold 45px/100% cursive;
