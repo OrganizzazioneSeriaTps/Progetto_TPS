@@ -2,15 +2,80 @@
 <html>
     <head>
         <title>Violino</title>
-        <link rel="stylesheet" type="text/css" href="">
+        <link rel="stylesheet" type="text/css" href="Violino.css">
     </head>
     
     <body>
-        <!--navigazione-->
-        <a href="../HomePage/HomePage.html">Home</a>
-        <a href="../Chitarra/Chitarra.html">Chitarra</a>
-        <a href="../Pianoforte/Pianoforte.html">Pianoforte</a>
-        <a href="../Batteria/Batteria.html">Batteria</a>
-        <a href="../Violino/Violino.html">Violino</a>
+        <div class="immagine">
+            <h1>Violino</h1>
+        </div>
+        <table border="1" class="barnav">
+            <tbody>
+                <tr><td><a href="../HomePage/HomePage.html">Home</a></td><td><a href="../Batteria/Batteria.html">Batteria</a></td><td><a href="../Chitarra/Chitarra.html">Chitarra</a></td><td><a href="../Pianoforte/Pianoforte.html">Pianoforte</a></td></tr>
+            </tbody>
+        </table>
+        <table border="1" class="presentazione">
+            <tbody>
+                <tr><th>Presentazione Corso</th></tr>
+                <tr><td>Il Corso di Violino è strutturato in moda da far acquisire ad ogni allievo le abilità e le conoscenze teoriche indispensabili per imparare a suonare il Violino, attraverso una buona pratica musicale, un approccio completo e multidisciplinare con particolare attenzione agli aspetti di tecnica, metodo e sonorità.</td></tr>
+            </tbody>
+        </table>
+        <table border="1" class="lezioni">
+            <tbody>
+                <tr>
+                    <th>Prima lezione</th>
+                    <th>Seconda lezione</th>
+                </tr>
+                <tr>
+                    <td>Un corretto utilizzo dell'arco parte dalle basi.
+                        Una solida base d'impugnatura dell'arco favorisce una futura emissione sonora fluida e un controllo della tavolozza timbrica accurata</td>
+                    <td>So qualsiasi strumento è necessario passare una cospicua quantità di ore.
+                        Se non si conosce come posizionarsi rispetto allo strumento questo tempo, invece che una gioi, potrebbe diventare una tortura dolorosa.
+                    E' quindi fondamentale posizionarsi correttamente all'inizio per evitare fisiopatologie fastidiose in futuro</td>
+                </tr>
+                <tr>
+                    <th>Terza lezione</th>
+                    <th>Quarta lezione</th>
+                </tr>
+                <tr>
+                    <td>Questo step, che a molti potrebbe sembrare una banalità è invece un fondamentale essenziale per l'emissione sonora.
+                        "Tirare l'arco" in maniera corretta è il primo passo per un accurato controllo timbrico</td>
+                    <td>La Musica accade solo se si ci si mette in relazione gli uni con gli altri.
+                        Il primo elemento di condivisione e compartecipazione musicale è l'essere intonati gli uni agli altri.
+                        Cosa impossibile se prima non si è intonati con se stessi.
+                        E' quindi fondamentale accrescere il livello di discrezionalità di riconoscimento delle altezze e imparare a esercitarsi a farlo</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="lateralbar">
+            <tbody>
+                <tr><td><a href="../HomePage/HomePage.html">Home</a></td></tr>
+                <tr><td><a href="../Batteria/Batteria.html">Batteria</a></td></tr>
+                <tr><td><a href="../Chitarra/Chitarra.html">Chitarra</a></td></tr>
+                <tr><td><a href="../Pianoforte/Pianoforte.html">Pianoforte</a></td></tr>
+            </tbody>
+        </table>
+        <table border="1" class="fine">
+            <tbody>
+                <tr><th>Lezione</th><th>Ore</th></tr>
+                <tr><td>Prima</td><td>1</td></tr>
+                <tr><td>Seconda</td><td>1</td></tr>
+                <tr><td>Terza</td><td>2</td></tr>
+                <tr><td>Quarta</td><td>1</td></tr>
+                <tr><th>Totale</th><td id="totale"></td></tr>
+            </tbody>
+            <script>
+                var table=document.getElementById("table");
+                var val=document.getElementsByTagName("td");
+                var tot=0;
+                for (var i=0;i<(val.length-1);i++){
+                    var n=val[i].textContent;
+                    if(!isNaN(n)){
+                        tot=tot+parseInt(n);
+                    }
+                }
+                document.getElementById("totale").textContent=tot;
+            </script>
+        </table>
     </body>
 </html>

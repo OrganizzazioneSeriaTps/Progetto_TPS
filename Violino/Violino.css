@@ -1,0 +1,64 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.immagine{
+    background-image: url("violini.jpg");
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20%;
+    color: aliceblue;
+    font-size: larger;
+}
+
+.barnav{
+    width: 100%;
+    padding: 0;
+    overflow: hidden;;
+    border: 1px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.presentazione{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lezioni{
+    float: left;
+    width: 80%;
+    height:200px;
+    margin:10px;
+}
+
+.lateralbar{
+    float: left;
+    height:200px;
+    margin:10px;
+    width: 15%;
+    border: 1px solid;
+}
+
+.fine{
+    margin:10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+th{
+    background-color: coral;
+}
+
+@media screen and (max-width: 500px){
+    .immagine{
+        color: black;
+        background-image: none;
+        height: 10%;
+    }
+}
