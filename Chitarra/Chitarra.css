@@ -109,3 +109,44 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/* tabella */
+table {width:80% ; background-color: #1B34C2; color: #FFFFFF; border-color: #000000; border-collapse: collapse; }
+ 
+  
+  /* clearfix */
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+/* barra di navigazione verticale */
+body {margin:0}
+  
+  .icon-bar {
+    float:right;
+    width: 20%;
+    background-color: #555;
+  }
+  @media screen and (max-width:960px) {
+    #icon-bar{
+      display:none;
+    }
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: #281fa5;
+  }
