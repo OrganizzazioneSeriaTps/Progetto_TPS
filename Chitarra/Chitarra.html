@@ -2,15 +2,115 @@
 <html>
     <head>
         <title>Chitarra</title>
-        <link rel="stylesheet" type="text/css" href="">
+        <link rel="stylesheet" type="text/css" href="Chitarra.css">
+      <!-- per la navigazione -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
     </head>
     
     <body>
-        <!--navigazione-->
-        <a href="../HomePage/HomePage.html">Home</a>
-        <a href="../Chitarra/Chitarra.html">Chitarra</a>
-        <a href="../Pianoforte/Pianoforte.html">Pianoforte</a>
-        <a href="../Batteria/Batteria.html">Batteria</a>
-        <a href="../Violino/Violino.html">Violino</a>
+        <!-- immagine con titolo -->
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1>Corso di chitarra</h1>
+          <p>Per principianti ed esperti</p>
+        </div>
+        </div>
+          <!-- navigation bar   -->
+    <div class="navbar">
+      <a href="HomePage.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+      <a class="active" href="Chitarra.html"><i class="fa fa-fw fa-cube"></i> Corso Chitarra</a> 
+      <a href="Pianoforte.html"><i class="fa fa-fw fa-cube"></i> Corso Pianoforte</a> 
+      <a href="Violino.html"><i class="fa fa-fw fa-cube"></i> Corso Violino</a> 
+      <a href="Batteria.html"><i class="fa fa-fw fa-cube"></i> Corso Batteria</a>
+    </div>
+    <!-- presentazione -->
+    <h2>Presentazione del corso</h2>
+    <div align="center" class="container">
+      <img align="center" src="Img_Chitarra/chitarraAcqua.jpg" alt="Avatar" class="image">
+      <div align="center" class="overlay">
+           <!-- overlay che viene visualizzato quando si va col cursore al di sopra dell'immagine -->
+        <div class="text">In questo corso imparerai a suonare la chitarra in modo molto approfondito,
+          attraverso un percorso logico e graduale.
+          Allo stesso tempo però le spiegazioni saranno molto semplici e chiare
+           in modo che il tuo studio sia piacevole e ti porti a realizzare il sogno di suonare la chitarra.</div>
+      </div>
+    </div>
+    <!-- tabelle lezioni -->
+    <h2 align="left">Lezioni</h2>
+<div class="clearfix" style="overflow-x: auto;">
+<table border="3" cellspacing="20" cellpadding="40" align="left">
+  <tbody>
+  <tr>
+  <th>I fondamentali</th>
+  <th>Gli accordi</th>
+  </tr>
+  <tr>
+  <td>In questa prima lezione partiremo dai fondamentali, impareremo a leggere e fare un uso corretto del pentagramma. In particolare impareremo a emettere vari suoni con la chitarra, a fine lezione saremo in grado di fare una scala.</td>
+  <td>In questa seconda lezione impareremo a fare diversi accordi come quello di LA o quella di RE, impareremo a tenere il corretto posizionamento delle mani e i movimenti che occorrone per svolgere gli accordi.</td>
+  </tr>
+  
+  </tbody>
+  </table>
+  <div class="icon-bar">
+    <a href="HomePage.html"><i class="fa fa-home"></i>Home</a> 
+    <a class="active"  href="Chitarra.html"><i class="fa fa-cube"></i>Corso Chitarra</a> 
+    <a href="Pianoforte.html"><i class="fa fa-cube">Corso Pianoforte</i></a>
+    <a href="Violino.html"><i class="fa fa-cube"></i>Corso Violino</a> 
+    <a href="Batteria.html"><i class="fa fa-cube"></i>Corso Batteria</a> 
+  </div>
+</div>
+<!-- tabella totali -->
+<table id="Table" border="2" cellspacing="6" cellpadding="8" align="left">
+  <tbody>
+  <tr>
+  <th>Lezione</th>
+  <th>Totale Ore</th>
+  </tr>
+  <tr>
+  <td>I fondamentali</td>
+  <td>4</td>
+  </tr>
+  <tr>
+  <td>Gli accordi</td>
+  <td>4</td>
+  </tr>
+  <tr>
+  <th>Totale</th>
+  <td id="Totale"></td>
+  </tr>
+  </tbody>
+  </table>
+  <!-- calcolo totale -->
+  <script>    
+    var table = document.getElementById("Table");
+    var cells = table.getElementsByTagName("td");
+    var tot = 0;
+    for (var i = 0; i < (cells.length -1); i++) 
+    {
+        var v = cells[i].textContent;
+        if (! isNaN(v))  // isNaN valuta se può essere convertito in numero ma non lo converte
+        {
+            v = parseInt(v); // parseInt converte in numeri ma non ritorno un valore booleano testabile nel IF
+            tot = tot + v;
+        }
+    }
+    document.getElementById("Totale").textContent = tot;
+</script>
+<!-- video -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2>Ecco uno dei migliori studenti del nostro corso!</h2>
+<video width=100% height=30% controls>
+  <source src="Img_Chitarra/videoThomas.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
     </body>
 </html>
